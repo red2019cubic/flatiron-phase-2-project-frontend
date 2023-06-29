@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats").then(r => r.json()).then(data => console.table(data))
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn More....
         </a>
       </header>
     </div>
