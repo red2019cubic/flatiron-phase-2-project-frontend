@@ -112,6 +112,22 @@ th:nth-child(even),td:nth-child(even) {
   border-color: rgb(228, 19, 30);
 }
 input[type=text]:focus {
-  background-color: #ddd;
+  background-color: #ddddddcb;
   outline: none;
+  
+}
+.formdata
+{
+  margin-left: 35%;
+  justify-content: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#submitbtn{
+  width:43%
 }
