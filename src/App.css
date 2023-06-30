@@ -16,8 +16,10 @@
 
 
 nav{
+  display: flex;
+  justify-content: flex-start;
   text-align: left;
-  margin-left: 20px;
+  margin-left: 0px;
   background-color: #e3f2fd;
   width: 100%;
 }
@@ -68,22 +70,32 @@ thead {
   font-weight: bold;
   color: #009879;
 }
-img {
-  width:fit-content;
-  object-fit: cover;
-}
-.header{
-  background-color: chocolate;
-}
-aside{
-  width: 30%;
-  padding-right: 0;
-  margin-right: 0;
-  float: left;
-}
+
+
+
 th:nth-child(even),td:nth-child(even) {
   background-color: rgba(150, 212, 212, 0.4);
 }
-h1{
-  background-image: ;
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header{
+  background-color: orange;
+  height: 100px;
+}
+.form-inline{
+  align-items: center;
+}
+.fa{
+  align-items: center;
 }

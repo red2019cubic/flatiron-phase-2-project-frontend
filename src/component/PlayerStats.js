@@ -1,33 +1,42 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Item, Search } from "semantic-ui-react";
 import NavBar from "./NavBar";
 
-function PlayerStats(props) {
-    const [users, setUsers] = useState([])
-    const [loading, setLoading] = useState(false)
-    useEffect(() => {
-      setLoading(true)
-      fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
-        .then(response => response.json())
-        .then(json => setUsers(json))
-        .finally(() => {
-          setLoading(false)
-        })
-    }, [])
+function PlayerStats() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState('');
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
+      .then((response) => response.json())
+      .then((json) => setUsers(json))
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-    
-
-    }
- 
   return (
-   
     <div className="table-responsive-sm">
-         <NavBar />
+        <NavBar />
+      <form className="form-inline">
+        <input
+          className="form-control mr-sm-2"
+          type="search"
+          placeholder="Search Player"
+          aria-label="Search"
+          
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Delete/update</th>
+            <th scope="col">Delete</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
             <th scope="col">Games</th>
@@ -60,10 +69,17 @@ function PlayerStats(props) {
           </tr>
         </thead>
         <tbody>
-        {users.filter(user => {
-            return Search.toLowerCase() === ''? user : Item.player_name.toLowerCase().includes()}).map(user => (
+          {users
+            .filter(user => {
+              return search.toLowerCase() === ""
+                ? user
+                : user.player_name.toLowerCase().includes(search);
+            })
+            .map((user) => (
               <tr key={user.id}>
-                <td><button>Delete</button></td>
+                <td>
+                <a href="#"><i class="fa fa-trash" content="center"></i></a>
+                </td>
                 <td>{user.player_name}</td>
                 <td>{user.age}</td>
                 <td>{user.games}</td>
@@ -100,6 +116,5 @@ function PlayerStats(props) {
       </table>
     </div>
   );
-
-
+}
 export default PlayerStats;

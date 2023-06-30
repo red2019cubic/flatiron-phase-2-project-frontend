@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <div className="navlist">
-          <h1>NBA Player's Stats</h1>
-        </div>
+          <div className="container">
+          {/* <img src="https://img.freepik.com/free-vector/gradient-halftone-basketball-twitch-banner_23-2149355453.jpg?w=826&t=st=1688253420~exp=1688254020~hmac=f2299422388b7adfdac71f535e73bcf4a10805f4eb125894f152c3241e9450fd" alt="nbaphoto" /> */}
+          <div class="centered"><h1>NBA Player Stats</h1></div>
+          </div>
       </header>
       
       <main>
