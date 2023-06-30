@@ -40,9 +40,9 @@ nav{
 h1{
   padding: 20px;
   text-align: center;
-  
- 
- 
+}
+h3{
+  margin:50px ;
 }
 th,
 td {
@@ -94,7 +94,7 @@ th:nth-child(even),td:nth-child(even) {
 .header{
   
   height: 100px;
-  background-image: "nbabanner.png";
+  background-color:goldenrod;
 }
 .form-inline{
   align-items: center;
@@ -120,13 +120,16 @@ input[type=text]:focus {
 {
   margin-left: 35%;
   justify-content: center;
+
 }
 form
 {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+    margin-top:25px;
     text-align: left;
+  
 }
 #submitbtn{
   width:43%
