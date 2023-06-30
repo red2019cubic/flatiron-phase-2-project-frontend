@@ -7,9 +7,7 @@ import AddPlayerStat from "./component/AddPlayerStat";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
-  fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
-    .then((r) => r.json())
-    .then((data) => console.table(data));
+
   return (
     <div className="App">
       <header className="header">
