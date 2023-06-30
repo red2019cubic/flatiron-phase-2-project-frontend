@@ -1,7 +1,9 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useState } from "react"
 
 function NavBar() {
+    const[search, setSearch] = useState('');
   return (
     <div className="App">
       <nav className="navbar navbar-light" width="100%">
@@ -14,6 +16,7 @@ function NavBar() {
             type="search"
             placeholder="Search Player"
             aria-label="Search"
+            onChange={e=> setSearch(e.target.value)}
           />
           <button
             className="btn btn-outline-success my-2 my-sm-0"

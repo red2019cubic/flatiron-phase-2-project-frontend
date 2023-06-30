@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Item, Search } from "semantic-ui-react";
+import NavBar from "./NavBar";
 
 function PlayerStats(props) {
     const [users, setUsers] = useState([])
@@ -13,9 +15,15 @@ function PlayerStats(props) {
           setLoading(false)
         })
     }, [])
+
+    
+
+    }
  
   return (
+   
     <div className="table-responsive-sm">
+         <NavBar />
       <table className="table">
         <thead>
           <tr>
@@ -52,7 +60,8 @@ function PlayerStats(props) {
           </tr>
         </thead>
         <tbody>
-        {users.map(user => (
+        {users.filter(user => {
+            return Search.toLowerCase() === ''? user : Item.player_name.toLowerCase().includes()}).map(user => (
               <tr key={user.id}>
                 <td><button>Delete</button></td>
                 <td>{user.player_name}</td>
@@ -91,6 +100,6 @@ function PlayerStats(props) {
       </table>
     </div>
   );
-}
+
 
 export default PlayerStats;
