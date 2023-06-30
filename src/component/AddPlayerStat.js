@@ -2,36 +2,36 @@ import React from "react";
 
 function AddPlayerStat() {
   return (
-    <form>
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
-      <input type="text" />
+    <form className="formdata">
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
+      <input type="text" /><br/><br/>
       <button>Submit</button>
     </form>
   );

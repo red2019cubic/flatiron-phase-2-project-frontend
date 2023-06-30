@@ -102,3 +102,16 @@ th:nth-child(even),td:nth-child(even) {
 .fa{
   align-items: center;
 }
+
+.formdata {
+  height: 65vh;
+  border: none;
+  display: block;
+
+  direction: center;
+  border-color: rgb(228, 19, 30);
+}
+input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
