@@ -38,8 +38,10 @@ nav{
     padding: 12px 15px;
 }
 h1{
+  padding: 20px;
   text-align: center;
-  margin-top: 50px;
+  
+ 
  
 }
 th,
@@ -89,9 +91,10 @@ th:nth-child(even),td:nth-child(even) {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header{
-  background-color: orange;
+.header{
+  
   height: 100px;
+  background-image: "nbabanner.png";
 }
 .form-inline{
   align-items: center;
