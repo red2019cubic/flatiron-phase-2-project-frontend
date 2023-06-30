@@ -19,9 +19,7 @@ function App() {
       </header>
 
       <main>
-        
         <Router>
-       
           <Switch>
             <Route exact path="/">
               <PlayerStats />

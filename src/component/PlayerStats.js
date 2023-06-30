@@ -37,6 +37,7 @@ function PlayerStats() {
         <thead>
           <tr>
             <th scope="col">Delete</th>
+            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
             <th scope="col">Games</th>
@@ -80,6 +81,7 @@ function PlayerStats() {
                 <td>
                 <a href="#"><i class="fa fa-trash" content="center"></i></a>
                 </td>
+                <td>{user.id}</td>
                 <td>{user.player_name}</td>
                 <td>{user.age}</td>
                 <td>{user.games}</td>
