@@ -72,16 +72,13 @@ function PlayerStats() {
         <tbody>
           {users
             .filter(user => {
-              return search.toLowerCase() === ""
-                ? user
-                : user.player_name.toLowerCase().includes(search);
+              return (search?.toLowerCase() === "") ? user : user.player_name?.toLowerCase().includes(search);
             })
             .map((user) => (
               <tr key={user.id}>
                 <td>
                 <a href="#"><i class="fa fa-trash" content="center"></i></a>
                 </td>
-                <td>{user.id}</td>
                 <td>{user.player_name}</td>
                 <td>{user.age}</td>
                 <td>{user.games}</td>
