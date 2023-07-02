@@ -16,6 +16,13 @@ function PlayerStats() {
       });
   }, []);
 
+  const handleDelete = (id)=>{
+    fetch(`https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,{ method: 'DELETE' })
+    
+    
+    
+  }
+
   return (
     <div className="table-responsive-sm">
         <NavBar />
@@ -36,7 +43,7 @@ function PlayerStats() {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Delete</th>
+          
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
@@ -67,6 +74,7 @@ function PlayerStats() {
             <th scope="col">PTS</th>
             <th scope="col">Team</th>
             <th scope="col">Season</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -77,7 +85,7 @@ function PlayerStats() {
             .map((user) => (
               <tr key={user.id}>
                 <td>
-                <a href="#"><i class="fa fa-trash" content="center"></i></a>
+                {user.id}
                 </td>
                 <td>{user.player_name}</td>
                 <td>{user.age}</td>
@@ -109,6 +117,7 @@ function PlayerStats() {
                 <td>{user.PTS}</td>
                 <td>{user.team}</td>
                 <td>{user.season}</td>
+                <button content="center" onClick={()=>handleDelete(users.id)}>Delete</button>
               </tr>
             ))}
         </tbody>
