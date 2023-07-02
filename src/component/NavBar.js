@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import AddPlayerStat from "./AddPlayerStat";
-
+//Navigation component 
 function NavBar() {
   return (
     <div className="App">

@@ -75,7 +75,7 @@ function Home() {
             <th scope="col">PTS</th>
             <th scope="col">Team</th>
             <th scope="col">Season</th>
-            <th scope="col">Delete</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>

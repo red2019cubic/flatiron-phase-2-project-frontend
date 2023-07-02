@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Project Overview
+The NBA Player Stats React Project is aimed at providing a user-friendly interface to access and visualize various statistical data for NBA players. The project utilizes React, a popular JavaScript library for building user interfaces, to create an interactive and dynamic web application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Features
+### Player Search:
+ Users can search for NBA players by name or team, and the application will display the corresponding player's statistics.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To run the NBA Player Stats React Project locally on your machine, follow these steps:
+Clone the repository: git clone https://github.com/your-username/nba-player-stats-react-project.git
+Navigate to the project directory: cd nba-player-stats-react-project
+Install the dependencies: npm install
+Start the development server: npm start
+Open your browser and visit: http://localhost:3000
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The NBA Player Stats React Project relies on the following dependencies:
+React
+React Router
+Axios
+Chart.js
+React Chartjs 2
+Material-UI
+All necessary dependencies are listed in the package.json file. Make sure to install them using the package manager of your choice (e.g., npm or yarn).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Usage
 
-### `npm test`
+Once the project is set up and running, you can start using the NBA Player Stats React application. Here's a quick guide to get you started:
+Launch the application in your preferred web browser.
+Use the search bar to look up NBA players by name.
+Add players to your favorites list for quick access to their stats.
+Feel free to customize and enhance the application to meet your specific requirements and preferences.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Contributing
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributions to the NBA Player Stats React Project are welcome! If you encounter any bugs, have suggestions for new features, or would like to contribute code, please submit an issue or pull request to the project's repository.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Backend deployment: 
+Render ====>  https://github.com/red2019cubic/flatiron-phase-2-project-backend
 
-### `npm run build` fails to minify
+Frontend deployment:
+Netlify ===>  https://github.com/red2019cubic/flatiron-phase-2-project-frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# License
+
+The NBA Player Stats React Project is open-source and released under the MIT License. You are free to use, modify, and distribute the code for personal and commercial purposes.
+
+# Acknowledgments
+The NBA Player Stats React Project utilizes data from the NBA API (https://www.nba.com/).
+We would like to express our gratitude to the open-source community for providing valuable resources and tools.
+Thank you for using the NBA Player Stats React Project! We hope you enjoy exploring the statistics and gaining insights into your favorite NBA players' performance

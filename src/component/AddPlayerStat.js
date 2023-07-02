@@ -1,5 +1,5 @@
 import React from "react";
-import { useState} from "react";
+import { useState } from "react";
 import NavBar from "./NavBar";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
@@ -35,23 +35,24 @@ function AddPlayerStat() {
   const [PTS, setPTS] = useState("");
   const [team, setTeam] = useState("");
   const [season, setSeason] = useState("");
-  const history = useHistory()
-
+  const history = useHistory();
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
-
     setLoading(true);
-
     axios
-      .post("https://flatiron-phase2-project-backend.onrender.com/playerstats",formData).then(res => {
-        alert("Data added successfully!")
-        history.push("/")
-        
+      .post(
+        "https://flatiron-phase2-project-backend.onrender.com/playerstats",
+        formData
+      )
+      .then((res) => {
+        alert("Data added successfully!");
+        history.push("/");
       })
-    
+
       .catch((error) => console.log(error));
   };
+  
   return (
     <div className="addplayer">
       <NavBar />

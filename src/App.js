@@ -2,7 +2,6 @@ import "./App.css";
 import PlayerStats from "./component/Home";
 import Home from "./component/Home";
 import About from "./component/About";
-
 import AddPlayerStat from "./component/AddPlayerStat";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -14,7 +13,6 @@ function App() {
           <strong>NBA Player Stats</strong>
         </h1>
       </header>
-
       <main>
         <Router>
           <Switch>
