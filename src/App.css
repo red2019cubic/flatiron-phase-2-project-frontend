@@ -1,5 +1,4 @@
 .table {
-  
   border-spacing: 0;
   color: #4a4a4d;
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11,11 +10,9 @@
   font-family: sans-serif;
   min-width: 400px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-
 }
 
-
-nav{
+nav {
   display: flex;
   justify-content: flex-start;
   text-align: left;
@@ -23,7 +20,7 @@ nav{
   background-color: #e3f2fd;
   width: 100%;
 }
-.navlist{
+.navlist {
   background-color: gold;
   margin: 25px 0 25 0;
 }
@@ -35,14 +32,14 @@ nav{
 }
 .table th,
 .table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
-h1{
+h1 {
   padding: 20px;
   text-align: center;
 }
-h3{
-  margin:50px ;
+h3 {
+  margin: 50px;
 }
 th,
 td {
@@ -73,12 +70,10 @@ thead {
   color: #009879;
 }
 
-
-
-th:nth-child(even),td:nth-child(even) {
+th:nth-child(even),
+td:nth-child(even) {
   background-color: rgba(150, 212, 212, 0.4);
 }
-
 
 .container {
   position: relative;
@@ -91,17 +86,14 @@ th:nth-child(even),td:nth-child(even) {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.header{
-  
-  
-  background-color:goldenrod;
+.header {
+  background-color: goldenrod;
   background-size: cover;
-  
 }
-.form-inline{
+.form-inline {
   align-items: center;
 }
-.fa{
+.fa {
   align-items: center;
 }
 
@@ -113,31 +105,37 @@ th:nth-child(even),td:nth-child(even) {
   direction: center;
   border-color: rgb(228, 19, 30);
 }
-input[type=text]:focus {
+input[type="text"]:focus {
   background-color: #ddddddcb;
-  
+
   outline: none;
-  
 }
-.formdata
-{
+.formdata {
   margin-left: 35%;
   justify-content: center;
-
 }
-form
-{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:25px;
-    text-align: left;
-  
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  text-align: left;
 }
-#submitbtn{
-  width:43%
+#submitbtn {
+  width: 43%;
+  color:#dddddd;
 }
-.about{
+.about {
   background-color: #009879;
+  margin: 30px;
+  padding: 60px;
 }
 
+p {
+  text-indent: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
+  line-height: 1em;
+  align-content: center;
+}

@@ -2,13 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 
+
 function Home() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState('');
   useEffect(() => {
     setLoading(true);
-    fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
+    fetch("https://sage-starlight-8c7eab.netlify.app/")
       .then((response) => response.json())
       .then((json) => setUsers(json))
       .finally(() => {
@@ -17,7 +18,7 @@ function Home() {
   }, []);
 
   const handleDelete = (id)=>{
-    fetch(`https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,{ method: 'DELETE' })
+    fetch(`https://sage-starlight-8c7eab.netlify.app/${id}`,{ method: 'DELETE' })
     
     
     
