@@ -93,8 +93,10 @@ th:nth-child(even),td:nth-child(even) {
 }
 .header{
   
-  height: 100px;
+  
   background-color:goldenrod;
+  background-size: cover;
+  
 }
 .form-inline{
   align-items: center;
@@ -113,6 +115,7 @@ th:nth-child(even),td:nth-child(even) {
 }
 input[type=text]:focus {
   background-color: #ddddddcb;
+  
   outline: none;
   
 }
