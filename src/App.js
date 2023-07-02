@@ -1,5 +1,5 @@
 import "./App.css";
-import PlayerStats from "./component/PlayerStats";
+import PlayerStats from "./component/Home";
 import NavBar from "./component/NavBar";
 import Home from "./component/Home";
 import About from "./component/About";
