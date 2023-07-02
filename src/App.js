@@ -2,6 +2,7 @@ import "./App.css";
 import PlayerStats from "./component/PlayerStats";
 import NavBar from "./component/NavBar";
 import Home from "./component/Home";
+import About from "./component/About";
 
 import AddPlayerStat from "./component/AddPlayerStat";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/home">
               <Home />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
           </Switch>
         </Router>
