@@ -20,9 +20,6 @@ The NBA Player Stats React Project relies on the following dependencies:
 React
 React Router
 Axios
-Chart.js
-React Chartjs 2
-Material-UI
 All necessary dependencies are listed in the package.json file. Make sure to install them using the package manager of your choice (e.g., npm or yarn).
 
 # Usage

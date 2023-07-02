@@ -19,7 +19,7 @@ function Home() {
 
   const handleDelete = (id)=>{
     fetch(`https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,{ method: 'DELETE' }).then(res => {
-      alert("Record Deleted")
+      alert("Record Deleted Successfully")
     })
        
   }
@@ -27,20 +27,15 @@ function Home() {
   return (
     <div className="table-responsive-sm">
         <NavBar />
-      <form className="form-inline">
-        <input
-          className="form-control mr-sm-2"
-          type="search"
-          placeholder="Search Player"
+
+      <div class="form-outline mb-4">
+          <input type="search" class="form-control" id="datatable-search-input"     placeholder="Search Player"
           aria-label="Search"
           
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
+          onChange={(e) => setSearch(e.target.value)}/>
+         
+      </div>
+     
       <table className="table">
         <thead>
           <tr>
