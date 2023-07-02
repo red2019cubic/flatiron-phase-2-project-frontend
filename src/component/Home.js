@@ -9,7 +9,7 @@ function Home() {
   const [search, setSearch] = useState('');
   useEffect(() => {
     setLoading(true);
-    fetch("https://sage-starlight-8c7eab.netlify.app/")
+    fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
       .then((response) => response.json())
       .then((json) => setUsers(json))
       .finally(() => {
@@ -18,10 +18,10 @@ function Home() {
   }, []);
 
   const handleDelete = (id)=>{
-    fetch(`https://sage-starlight-8c7eab.netlify.app/${id}`,{ method: 'DELETE' })
-    
-    
-    
+    fetch(`https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,{ method: 'DELETE' }).then(res => {
+      alert("Record Deleted")
+    })
+       
   }
 
   return (
