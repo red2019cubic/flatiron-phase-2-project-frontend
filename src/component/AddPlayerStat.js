@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
+import axios from "axios";
 function AddPlayerStat() {
   const [loading, setLoading] = useState(false);
   const[newPlayerStat, setNewPlayerStat]=useState([])
@@ -70,15 +71,11 @@ function AddPlayerStat() {
     // };
     setLoading(true);
 
-    fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats", {
-      method: "POST",
-      header: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(formData)
-    }).then((r) => r.json())
-    .then((newStat) => setNewPlayerStat(newPlayerStat)
-    );
+    axios.post("https://flatiron-phase2-project-backend.onrender.com/playerstats", formData)
+    .then((r) => {
+      console.log(r)
+      e.target.reset()
+    }).catch(error=>console.log(error));
   };
   return (
     
