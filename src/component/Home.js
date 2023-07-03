@@ -76,7 +76,7 @@ function Home() {
         <tbody>
           {users
             .filter(user => {
-              return (search?.toLocaleLowerCase() || search?.toLocaleLowerCase()  === "") ? user : user.player_name?.toLocaleLowerCase().includes(search) || user.player_name?.toLocaleLowerCase().includes(search);
+              return (search?.toLocaleLowerCase() || search?.toLocaleUpperCase() === "") ? user : user.player_name?.toLocaleLowerCase().includes(search) || user.player_name?.toLocaleLowerCase().includes(search);
             })
             .map((user) => (
               <tr key={user.id}>
