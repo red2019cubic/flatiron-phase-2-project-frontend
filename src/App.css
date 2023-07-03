@@ -88,7 +88,8 @@ td:nth-child(even) {
 }
 .header {
   background-color: goldenrod;
-  background-size: cover;
+  
+
 }
 .form-inline {
   align-items: center;
