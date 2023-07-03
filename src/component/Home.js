@@ -2,11 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 
-
 function Home() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   useEffect(() => {
     setLoading(true);
     fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
@@ -17,29 +16,33 @@ function Home() {
       });
   }, []);
 
-  const handleDelete = (id)=>{
-    fetch(`https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,{ method: 'DELETE' }).then(res => {
-      alert("Record Deleted Successfully")
-    })
-       
-  }
+  const handleDelete = (id) => {
+    fetch(
+      `https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,
+      { method: "DELETE" }
+    ).then((res) => {
+      alert("Record Deleted Successfully");
+    });
+  };
 
   return (
     <div className="table-responsive-sm">
-        <NavBar />
+      <NavBar />
 
       <div class="form-outline mb-4">
-          <input type="search" class="form-control" id="datatable-search-input"     placeholder="Search Player"
+        <input
+          type="search"
+          class="form-control"
+          id="datatable-search-input"
+          placeholder="Search Player"
           aria-label="Search"
-          
-          onChange={(e) => setSearch(e.target.value)}/>
-         
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
-     
+
       <table className="table">
         <thead>
           <tr>
-          
             <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Age</th>
@@ -75,14 +78,16 @@ function Home() {
         </thead>
         <tbody>
           {users
-            .filter(user => {
-              return (search === "" ) ? user : user.player_name.toLowerCase().includes(search) || user.player_name.toUpperCase().includes(search);
+            .filter((user) => {
+              return search?.toLowerCase() === ""
+                ? user
+                : user.player_name.toLowerCase().includes(search) ||
+                    user.player_name.toUpperCase().includes(search) ||
+                    (user.player_name.charAt(0).toUpperCase() + user.player_name.substr(1, user.player_name.length)).includes(search);
             })
             .map((user) => (
               <tr key={user.id}>
-                <td>
-                {user.id}
-                </td>
+                <td>{user.id}</td>
                 <td>{user.player_name}</td>
                 <td>{user.age}</td>
                 <td>{user.games}</td>
@@ -113,7 +118,9 @@ function Home() {
                 <td>{user.PTS}</td>
                 <td>{user.team}</td>
                 <td>{user.season}</td>
-                <button content="center" onClick={()=>handleDelete(users.id)}>Delete</button>
+                <button content="center" onClick={() => handleDelete(users.id)}>
+                  Delete
+                </button>
               </tr>
             ))}
         </tbody>
