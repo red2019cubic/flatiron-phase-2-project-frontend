@@ -285,7 +285,7 @@ function AddPlayerStat() {
           />
           <br />
           <br />
-          <button id="submitbtn">Submit</button>
+          <button type="submit" id="submitbtn">Submit</button>
         </form>
       </div>
     </div>
