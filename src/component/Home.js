@@ -7,12 +7,12 @@ function Home() {
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   useEffect(() => {
-    setLoading(true);
+    setLoading(loading);
     fetch("https://flatiron-phase2-project-backend.onrender.com/playerstats")
       .then((response) => response.json())
       .then((json) => setUsers(json))
       .finally(() => {
-        setLoading(false);
+        setLoading(true);
       });
   }, []);
 
@@ -39,7 +39,8 @@ function Home() {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-
+      <div class="outer-wrapper">
+    <div class="table-wrapper">
       <table className="table">
         <thead>
           <tr>
@@ -81,9 +82,14 @@ function Home() {
             .filter((user) => {
               return search?.toLowerCase() === ""
                 ? user
-                : user.player_name.toLowerCase().includes(search) ||
+                : user.player_name?.toLowerCase().includes(search) ||
                     user.player_name.toUpperCase().includes(search) ||
-                    (user.player_name.charAt(0).toUpperCase() + user.player_name.substr(1, user.player_name.length)).includes(search);
+                    (
+                      user.player_name.charAt(0).toUpperCase() 
+                      + user.player_name.substr(1, user.player_name.length)
+                    ).includes(search) ||
+                    
+                      user.team.toUpperCase().includes(search);
             })
             .map((user) => (
               <tr key={user.id}>
@@ -118,13 +124,15 @@ function Home() {
                 <td>{user.PTS}</td>
                 <td>{user.team}</td>
                 <td>{user.season}</td>
-                <button content="center" onClick={() => handleDelete(users.id)}>
+                <td><button id="btndelete" onClick={() => handleDelete(users.id)}>
                   Delete
-                </button>
+                </button></td>
               </tr>
             ))}
         </tbody>
       </table>
+      </div>
+      </div>
     </div>
   );
 }
