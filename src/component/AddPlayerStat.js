@@ -1,11 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import NavBar from "./NavBar";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
-function AddPlayerStat() {
-  const [loading, setLoading] = useState(false);
-  const [newPlayerStat, setNewPlayerStat] = useState([]);
+
+function AddPlayerStat({ handleSubmit }) {
+ 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [game, setGame] = useState("");
@@ -35,23 +33,8 @@ function AddPlayerStat() {
   const [PTS, setPTS] = useState("");
   const [team, setTeam] = useState("");
   const [season, setSeason] = useState("");
-  const history = useHistory();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = Object.fromEntries(new FormData(e.target));
-    setLoading(true);
-    axios
-      .post(
-        "https://flatiron-phase2-project-backend.onrender.com/playerstats",
-        formData
-      )
-      .then((res) => {
-        alert("Data added successfully!");
-        history.push("/");
-      })
+ 
 
-      .catch((error) => console.log(error));
-  };
   
   return (
     <div className="addplayer">
@@ -77,14 +60,14 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="games"
+            name="game"
             placeholder="Player Games"
             value={game}
             onChange={(e) => setGame(e.target.value)}
           />
           <input
             type="text"
-            name="gamesstarted"
+            name="gamestarted"
             placeholder="Player Games Started"
             value={gamestarted}
             onChange={(e) => setGameStarted(e.target.value)}
@@ -173,7 +156,7 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="pf"
+            name="PF"
             placeholder="Player PF"
             value={PF}
             onChange={(e) => setPF(e.target.value)}
@@ -182,17 +165,21 @@ function AddPlayerStat() {
             type="text"
             name="effectfgpercent"
             placeholder="Player Effect fg Percent"
+            value={effectfgpercent}
+            onChange={(e) => setEffectfgPercent(e.target.value)}
           />
           <br />
           <br />
           <input
             type="text"
-            name="fg"
+            name="ft"
             placeholder="Player ft"
             value={ft}
             onChange={(e) => setFt(e.target.value)}
           />
-          <input type="text" name="fta" placeholder="Player fta" />
+          <input type="text" name="fta" placeholder="Player fta" 
+           value={fta}
+           onChange={(e) => setFta(e.target.value)}/>
           <br />
           <br />
           <input
@@ -204,7 +191,7 @@ function AddPlayerStat() {
           />
           <input
             type="text"
-            name="orb"
+            name="ORB"
             placeholder="Player ORB"
             value={ORB}
             onChange={(e) => setORB(e.target.value)}
@@ -213,14 +200,14 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="drb"
+            name="DRB"
             placeholder="Player DRB"
             value={DRB}
             onChange={(e) => setDRB(e.target.value)}
           />
           <input
             type="text"
-            name="trb"
+            name="TRB"
             placeholder="Player TRB"
             value={TRB}
             onChange={(e) => setTRB(e.target.value)}
@@ -229,14 +216,14 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="ast"
+            name="AST"
             placeholder="Player AST"
             value={AST}
             onChange={(e) => setAST(e.target.value)}
           />
           <input
             type="text"
-            name="stl"
+            name="STL"
             placeholder="Player STL"
             value={STL}
             onChange={(e) => setSTL(e.target.value)}
@@ -245,14 +232,14 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="blk"
+            name="BLK"
             placeholder="Player BLK"
             value={BLK}
             onChange={(e) => setBLK(e.target.value)}
           />
           <input
             type="text"
-            name="tov"
+            name="TOV"
             placeholder="Player TOV"
             value={TOV}
             onChange={(e) => setTOV(e.target.value)}
@@ -262,7 +249,7 @@ function AddPlayerStat() {
           <br />
           <input
             type="text"
-            name="pts"
+            name="PTS"
             placeholder="Player PTS"
             value={PTS}
             onChange={(e) => setPTS(e.target.value)}

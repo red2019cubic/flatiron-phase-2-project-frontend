@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
 
-function Home() {
+function Home({ handleDelete }) {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -15,15 +15,6 @@ function Home() {
         setLoading(true);
       });
   }, []);
-
-  const handleDelete = (id) => {
-    fetch(
-      `https://flatiron-phase2-project-backend.onrender.com/playerstats/${id}`,
-      { method: "DELETE" }
-    ).then((res) => {
-      alert("Record Deleted Successfully");
-    });
-  };
 
   return (
     <div className="table-responsive-sm">
@@ -83,12 +74,12 @@ function Home() {
                   return search?.toLowerCase() === ""
                     ? user
                     : user.player_name?.toLowerCase().includes(search) ||
-                        user.player_name.toUpperCase().includes(search) ||
+                        user.player_name?.toUpperCase().includes(search) ||
                         (
-                          user.player_name.charAt(0).toUpperCase() +
-                          user.player_name.substr(1, user.player_name.length)
+                          user.player_name?.charAt(0)?.toUpperCase() +
+                          user.player_name?.substr(1, user.player_name.length)
                         ).includes(search) ||
-                        user.team.toUpperCase().includes(search);
+                        user.team?.toUpperCase().includes(search);
                 })
                 .map((user) => (
                   <tr key={user.id}>
